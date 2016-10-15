@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView number;
     private ImageView picture;
     private MediaPlayer mp;
+    private MediaPlayer whip;
+    private MediaPlayer whip2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         //clicker.setBackgroundResource(R.drawable.button);
 
         mp = MediaPlayer.create(this, R.raw.dab);
+        whip = MediaPlayer.create(this, R.raw.watchmewhip);
+        whip2 = MediaPlayer.create(this, R.raw.watchmewhip2);
         //mp.start();
     }
 
@@ -58,10 +62,13 @@ public class MainActivity extends AppCompatActivity {
             picture.setImageResource(R.drawable.pic6);
         }
         if(dabs == 100){
+            //mp.stop();
             picture.setImageResource(R.drawable.hillarywhip2);
+            whip.start();
         }
         if(dabs == 101){
             picture.setImageResource(R.drawable.hillarywhip);
+            whip2.start();
         }
         if(dabs == 42){
             picture.setImageResource(R.drawable.trump);
