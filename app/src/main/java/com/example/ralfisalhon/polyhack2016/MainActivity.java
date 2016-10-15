@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
         number.setText((Integer.toString(dabs)));
         if(dabs % 2 == 0){
-            picture.setImageResource(R.drawable.pic1);
+            picture.setImageResource(R.drawable.pic5);
         }
         else{
-            picture.setImageResource(R.drawable.pic2);
+            picture.setImageResource(R.drawable.pic6);
         }
         if(dabs % 3 == 0){
             number.setBackgroundColor(Color.parseColor("#ffffff"));
