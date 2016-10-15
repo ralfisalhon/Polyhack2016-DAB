@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         picture = (ImageView) findViewById(R.id.imageView);
 
-        //Button myButton = (Button) findViewById(R.id.clicker);
-        //myButton.setBackgroundResource(R.drawable.flag);
+        //clicker.setBackgroundResource(R.drawable.button);
 
         mp = MediaPlayer.create(this, R.raw.dab);
         //mp.start();
@@ -58,17 +57,30 @@ public class MainActivity extends AppCompatActivity {
         else{
             picture.setImageResource(R.drawable.pic6);
         }
-        if(dabs % 3 == 0){
-            number.setBackgroundColor(Color.parseColor("#ffffff"));
-            picture.setBackgroundColor(Color.parseColor("#ffffff"));
+        if(dabs == 100){
+            picture.setImageResource(R.drawable.hillarywhip2);
         }
-        if(dabs % 3 == 1){
+        if(dabs == 101){
+            picture.setImageResource(R.drawable.hillarywhip);
+        }
+        if(dabs == 42){
+            picture.setImageResource(R.drawable.trump);
+        }
+        if(dabs % 3 == 0){
             number.setBackgroundColor(Color.parseColor("#FF5555"));
             picture.setBackgroundColor(Color.parseColor("#FF5555"));
+            //clicker.setBackgroundColor(Color.parseColor("#FF5555"));
+
         }
-        if(dabs % 3 == 2){
+        if(dabs % 3 == 1){
             number.setBackgroundColor(Color.parseColor("#0061ff"));
             picture.setBackgroundColor(Color.parseColor("#0061ff"));
+            //clicker.setBackgroundColor(Color.parseColor("#0061ff"));
+        }
+        if(dabs % 3 == 2){
+            number.setBackgroundColor(Color.parseColor("#ffffff"));
+            picture.setBackgroundColor(Color.parseColor("#ffffff"));
+            //clicker.setBackgroundColor(Color.parseColor("#ffffff"));
         }
     }
 

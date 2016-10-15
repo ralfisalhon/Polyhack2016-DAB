@@ -27,7 +27,7 @@
     <Button
         android:id="@+id/clicker"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         android:text="DAB"
         android:textSize="32dp"
         android:layout_centerVertical="true"
