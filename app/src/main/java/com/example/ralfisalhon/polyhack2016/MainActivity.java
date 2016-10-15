@@ -1,5 +1,6 @@
 package com.example.ralfisalhon.polyhack2016;
 
+import android.content.pm.ActivityInfo;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
 
         clicker = (Button) findViewById(R.id.clicker);
         clicker.setOnClickListener(new View.OnClickListener() {
