@@ -10,7 +10,7 @@ import android.graphics.Color;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int dabs = 00;
+    private int dabs = 0;
     private Button clicker;
     private TextView number;
     private ImageView picture;
@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
         number.setText((Integer.toString(dabs)));
 
         picture = (ImageView) findViewById(R.id.imageView);
+
+        //Button myButton = (Button) findViewById(R.id.clicker);
+        //myButton.setBackgroundResource(R.drawable.flag);
     }
 
     protected void numberIncrease(){
