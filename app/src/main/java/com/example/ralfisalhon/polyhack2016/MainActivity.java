@@ -1,5 +1,6 @@
 package com.example.ralfisalhon.polyhack2016;
 
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private Button clicker;
     private TextView number;
     private ImageView picture;
+    private MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +39,14 @@ public class MainActivity extends AppCompatActivity {
 
         //Button myButton = (Button) findViewById(R.id.clicker);
         //myButton.setBackgroundResource(R.drawable.flag);
+
+        mp = MediaPlayer.create(this, R.raw.dab);
+        //mp.start();
     }
 
     protected void numberIncrease(){
+        mp.start();
+
         number.setText((Integer.toString(dabs)));
         if(dabs % 2 == 0){
             picture.setImageResource(R.drawable.pic1);
