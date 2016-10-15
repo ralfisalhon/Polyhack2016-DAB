@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         number = (TextView) findViewById(R.id.textView);
         number.setText((Integer.toString(dabs)));
+        number.setBackgroundColor(Color.parseColor("#ffffff"));
 
         picture = (ImageView) findViewById(R.id.imageView);
 
@@ -55,12 +56,12 @@ public class MainActivity extends AppCompatActivity {
             picture.setImageResource(R.drawable.pic2);
         }
         if(dabs % 3 == 0){
-            number.setBackgroundColor(Color.parseColor("#FF5555"));
-            picture.setBackgroundColor(Color.parseColor("#FF5555"));
-        }
-        if(dabs % 3 == 1){
             number.setBackgroundColor(Color.parseColor("#ffffff"));
             picture.setBackgroundColor(Color.parseColor("#ffffff"));
+        }
+        if(dabs % 3 == 1){
+            number.setBackgroundColor(Color.parseColor("#FF5555"));
+            picture.setBackgroundColor(Color.parseColor("#FF5555"));
         }
         if(dabs % 3 == 2){
             number.setBackgroundColor(Color.parseColor("#0061ff"));
